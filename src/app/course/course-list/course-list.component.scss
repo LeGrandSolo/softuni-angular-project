@@ -1,0 +1,74 @@
+ul {
+  margin: 1em auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+.course-instance {
+  height: 32vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  padding: 1em;
+  transition: 1s;
+  position: relative;
+}
+.onHoverDetails {
+  p {
+    color: #feffff;
+  }
+  margin-top: 1.5em;
+  word-wrap: break-word;
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+  width: 0%;
+  height: 100%;
+  right: 0;
+  transition: 1s;
+}
+.course-instance h3 {
+  color: #feffff;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.image-container {
+  height: 90%;
+  position: relative;
+  object-fit: contain;
+}
+.course-instance img {
+  border-radius: 0.5em;
+  float: left;
+  width: 100%;
+  height: calc(100% - 1em);
+  object-fit: contain;
+  transition: 1s;
+}
+li.in-front {
+  img {
+    width: 58%;
+    transition: 1s;
+  }
+
+  .onHoverDetails {
+    white-space: normal;
+    text-overflow: ellipsis;
+    object-fit: contain;
+    opacity: 100%;
+    width: 38%;
+    transition: 1s;
+  }
+  z-index: 1;
+  transition: 1s;
+}
+button {
+  border: none;
+  color: #feffff;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  float: left;
+}

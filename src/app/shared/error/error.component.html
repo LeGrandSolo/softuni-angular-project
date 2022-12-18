@@ -1,0 +1,5 @@
+<span *ngIf="displayErrors.length" [@showErrors] class="error-field">
+    <div *ngFor="let err of displayErrors" class="error-entry">
+        {{err}}
+    </div>
+</span>

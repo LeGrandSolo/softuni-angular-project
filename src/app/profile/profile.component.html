@@ -1,0 +1,19 @@
+<div class="profile">
+  <img src="/assets/icon-iconapng.png" alt="" id="icon" />
+  <h2>{{ user.username }}</h2>
+  <div class="discussions" >
+    <div class="publications" *ngIf="discussions">
+      <h3>Publications of this user:</h3>
+      <ul>
+        <li *ngFor="let discussion of discussions">
+          <a routerLink="/courses/details/{{ discussion.objectId }}">{{
+            discussion.name
+          }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="likes">
+        
+    </div>
+  </div>
+</div>

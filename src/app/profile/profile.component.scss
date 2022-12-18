@@ -1,0 +1,38 @@
+.profile {
+  border-radius: 0.5em;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0, auto;
+  text-align: center;
+  width: 98%;
+  height: 75vh;
+  overflow: hidden;
+  margin: 2em auto;
+  position: relative;
+  margin-top: 2em;
+}
+.auth-buttons {
+  margin-top: 24px;
+}
+#icon {
+    margin-top: 2em;
+  object-fit: contain;
+  overflow: hidden;
+  height: 7.5vh;
+}
+a,
+p,
+h2 ,h3{
+    margin-top: 0.5em;
+  color: #def2f1;
+}
+li{
+    list-style: none;
+    margin-bottom: 1em;
+}
+.publications{
+    padding: 1em;
+    background-color: rgba(68, 157, 209, 0.25);
+    width: 25%;
+    border-radius: 0.5em;
+    margin: 0 auto;
+}

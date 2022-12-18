@@ -1,0 +1,21 @@
+<div>
+ <!--  TODO loading wheel -->
+  <ul *ngIf="courses?.length !== 0">
+    <li
+      *ngFor="let course of courses"
+      class="course-instance"
+      appShowInFront
+      [hover-class]="'in-front'"
+    >
+      <h3>{{ course.name }}</h3>
+      <div class="image-container">
+        <img src="{{ course.imageUrl }}" alt="course-image" />
+        <div class="onHoverDetails">
+          <p>{{ course.description }}</p>
+          <button routerLink="/courses/details/{{course.objectId}}">Details</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <p *ngIf="courses?.length === 0">No courses yet!</p>
+</div>

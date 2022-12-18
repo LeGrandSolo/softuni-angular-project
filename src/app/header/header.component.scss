@@ -1,0 +1,44 @@
+.header{
+  padding-bottom: 12px;
+}
+.header-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 58px;
+  margin: 0;
+}
+.general-nav {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 24px;
+  max-height: 2em;
+}
+.auth-nav {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 24px;
+  max-height: 2em;
+}
+li {
+  padding: 0.5em;
+}
+a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.5em;
+  border-radius: 0.2em;
+}
+a:hover {
+  background-color: rgb(46, 68, 102);
+  transition: 0.5s;
+}
+h1 {
+  padding-top: 24px;
+  color: #feffff;
+  margin: 0, auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}

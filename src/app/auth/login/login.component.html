@@ -1,0 +1,29 @@
+<div class="form-content">
+  <h3>Login</h3>
+  <form #loginForm="ngForm" (ngSubmit)="submitForm()">
+    <label for="username">Username</label>
+    <input
+      type="text"
+      id="username"
+      required="true"
+      minlength="3"
+      #username="ngModel"
+      ngModel
+      name="username"
+    />
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="pass"
+      required="true"
+      minlength="4"
+      #password="ngModel"
+      ngModel
+      name="password"
+    />
+    <button>Log in</button>
+  </form>
+  <div *ngIf="errors" class="validation-field" >
+    
+  </div>
+</div>

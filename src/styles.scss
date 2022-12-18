@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800;900&display=swap");
+/* :root{
+    --color-dark: #17252A
+    --color-dark-blue: #2b7a78
+    --color-blue: #3aafa9
+    --color-gray: #def2f1
+    --color-white: #feffff
+    --color-new-blue: rgba(36, 58, 92, 0.9)
+    --color-new-light-blue: #96FBFC
+} */
+* {
+  font-family: "Montserrat", sans-serif;
+  color: #17252a;
+}
+span{
+  color: #feffff;
+}
+body {
+  min-height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5) url("/assets/ezgif.com-gif-maker.jpg");
+  filter: blur(100%);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  background-color: rgba(36, 58, 92, 0.9);
+  z-index: 1;
+}
+
+footer {
+  background-color: rgba(36, 58, 92, 0.9);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  height: 3em;
+}
+a {
+  text-decoration: none;
+}
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 36px;
+  margin-top: 12px;
+}
+form {
+  font-size: 1.2em;
+}
+label {
+  display: block;
+  margin: 0;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+input {
+  border: none;
+  margin-bottom: 12px;
+  background-color: #feffff;
+  border-radius: 0.2em;
+}
+input:focus {
+  outline: none;
+}
+button {
+  display: block;
+
+  background-color: #449dd1;
+  font-size: 1em;
+  color: #def2f1;
+  padding: 0.5em;
+  margin: 0 auto;
+  margin-top: 12px;
+  border: none;
+  border-radius: 0.2em;
+}
+.error-field {
+  float: right;
+  background-color: red;
+  color: #feffff;
+}
+.form-content {
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 0.5em;
+  width: 60%;
+  margin-top: 2em;
+  padding: 24px;
+  background-color: rgba(68, 157, 209, 0.25);
+}
+.form-content label,
+.form-content h3 {
+  color: #feffff;
+}
+input.ng-invalid.ng-touched {
+  border-left: solid 5px red;
+}
+input {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 30%;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(36, 58, 92, 0.6);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(36, 58, 92, 0.8);
+}
+.content{
+  overflow-y: scroll;
+  max-height: 80vh;
+}

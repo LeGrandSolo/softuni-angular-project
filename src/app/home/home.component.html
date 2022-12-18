@@ -1,0 +1,25 @@
+<div class="home">
+  <h2>
+    Welcome <span *ngIf="userData">{{ userData.username }}</span>
+  </h2>
+  <div *ngIf="!userData">
+    <p>
+      We are happy to see you in our platform for discussions of different topics.
+    </p>
+    <p>
+      This site is perfect for people, who are looking to express their inner genious.
+    </p>
+    <p>In order to proceed please log in</p>
+  </div>
+  <div *ngIf="userData">
+    <p>We are happy to see you back.</p>
+    <p>
+      You are free to start discussing and let your inner Aristotle roam this site!
+    </p>
+    <a id="discussion-link" routerLink="/courses/all-courses">See all discussions</a>
+  </div>
+  <div class="auth-buttons" *ngIf="!userData">
+    <a routerLink="/auth/login">Log In</a>
+    <a routerLink="/auth/register">Register</a>
+  </div>
+</div>

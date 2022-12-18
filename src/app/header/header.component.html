@@ -1,0 +1,19 @@
+<div class="header">
+  <h1>RRRREALNO POGLEDNATO</h1>
+  <ul class="header-list">
+    <span class="general-nav"
+      ><li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/courses/all-courses">All Discussions</a></li>
+      </span
+    >
+    <span class="auth-nav" *ngIf="!userData"
+      ><li><a routerLink="/auth/login">Login</a></li>
+      <li><a routerLink="/auth/register">Regiser</a></li></span
+    >
+    <span *ngIf="userData" class="auth-nav">
+      <li><a routerLink="/profile/{{userData.objectId}}">Hello, {{ userData.username }}</a></li>
+      <li><a routerLink="/courses/add-new">Add New Discussion</a></li>
+      <li><a routerLink="/auth/logout">Logout</a></li></span
+    >
+  </ul>
+</div>

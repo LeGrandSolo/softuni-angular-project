@@ -1,0 +1,54 @@
+<div class="form-content">
+  <h3>Add new lesson</h3>
+  <form #courseForm="ngForm" (ngSubmit)="submitForm()">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      required="true"
+      minlength="6"
+      #name="ngModel"
+      ngModel
+      name="name"
+    />
+    <label for="description">Description</label>
+    <textarea
+      name="description"
+      required="true"
+      minlength="10"
+      maxlength="200"
+      id="description"
+      cols="30"
+      rows="5"
+      ngModel
+    ></textarea>
+    <label for="imageUrl">Image Url</label>
+    <input
+      type="text"
+      id="imageUrl"
+      minlength="5"
+      ngModel
+      name="imageUrl"
+    />
+    <div ngModelGroup="topics" id="topic-div">
+      <label for="topics">Topics:</label>
+      <div id="topics">
+        <ng-container *ngFor="let option of options">
+          <label for="{{ option.value }}"
+            >{{ option.name }}
+            <input
+              type="checkbox"
+              name="{{ option.value }}"
+              id="{{ option.value }}"
+              ngModel
+          /></label>
+        </ng-container>
+      </div>
+
+      <label for="other" id="other-label">Other topic: </label>
+      <input type="text" name="other" id="other" ngModel />
+    </div>
+
+    <button>Add</button>
+  </form>
+</div>

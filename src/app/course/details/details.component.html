@@ -1,0 +1,47 @@
+<div *ngIf="course" class="details-container">
+  <div class="details-content">
+    <div class="info-container">
+      <img src="{{ course.imageUrl }}" alt="" class="course-img" />
+      <div class="course-info">
+        <h3>{{ course.name }}</h3>
+        <p>{{ course.description }}</p>
+        <p>Topics: {{ topics }}</p>
+        <p>Likes: {{course.likedUsers.length}}</p>
+        <div *ngIf="!isOwner && isLogged && !hasLiked" class="another-user">
+          <button class="blue-btn" (click)="like()">Like</button>
+        </div>
+        <div *ngIf="isOwner" class="creator">
+          <button
+            class="blue-btn"
+            routerLink="/courses/edit/{{ course.objectId }}"
+          >
+            Edit
+          </button>
+          <button class="red-btn" (click)="delete()">Delete</button>
+        </div>
+        <div class="user-container">
+          <a routerLink="/profile/{{ creator?.objectId }}">
+            <img
+              src="../../../assets/icon-iconapng.png"
+              alt=""
+              class="user-img"
+            />
+            <p>Creator: {{ creator?.username }}</p></a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- <div class="relative" *ngIf="!isOwner && isLogged">
+      <div class="form-content">
+        <h4>Add comment</h4>
+        <form #commentForm="ngForm" (ngSubmit)="submitForm()">
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" required minlength="5" />
+          <label for="comment"></label>
+          <textarea name="comment" id="comment" cols="40" rows="10" required minlength="5"></textarea>
+          <button>Comment</button>
+        </form>
+      </div>
+    </div> -->
+  </div>
+</div>
